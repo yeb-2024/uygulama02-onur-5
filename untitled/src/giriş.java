@@ -5,22 +5,22 @@ public class giriş {
 
     JFrame frame;
     JTextField kullanıcıadı;
-    JTextField şifre;
+    JTextField sıfre;
 
 
 
     public giriş(){
-        JPanel panelüst    = new JPanel();
+        JPanel pabelust    = new JPanel();
 
-        panelüst.setLayout(new FlowLayout(FlowLayout.RIGHT)   );
+        pabelust.setLayout(new FlowLayout(FlowLayout.RIGHT)   );
         JLabel labelust = new JLabel("kullanıcı adı");
         labelust.setFont(new Font("Arial", Font.PLAIN, 20));
 
 
         kullanıcıadı = new JTextField();
         kullanıcıadı.setPreferredSize(new Dimension(200,40));
-        panelüst.add(labelust);
-        panelüst.add(kullanıcıadı);
+        pabelust.add(labelust);
+        pabelust.add(kullanıcıadı);
 
         JPanel panelalt    = new JPanel();
 
@@ -29,10 +29,10 @@ public class giriş {
         labelalt.setFont(new Font("Arial", Font.PLAIN, 20));
 
 
-        şifre = new JTextField();
-        şifre.setPreferredSize(new Dimension(200,40));
+        sıfre = new JTextField();
+        sıfre.setPreferredSize(new Dimension(200,40));
         panelalt.add(labelalt);
-        panelalt.add(şifre);
+        panelalt.add(sıfre);
 
 
 
@@ -40,7 +40,7 @@ public class giriş {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE );
         frame.setSize(500,400);
         frame.setLayout(new GridLayout(3,1));
-        frame.add(panelüst);
+        frame.add(pabelust);
         frame.add(panelalt);
         frame.setVisible(true);
 
