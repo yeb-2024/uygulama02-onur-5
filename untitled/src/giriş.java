@@ -1,11 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class giriş {
+public class giriş implements ActionListener {
 
     JFrame frame;
     JTextField kullanıcıadı;
     JTextField sıfre;
+    JButton girişbutonu;
 
 
 
@@ -34,6 +37,11 @@ public class giriş {
         panelalt.add(labelalt);
         panelalt.add(sıfre);
 
+        girişbutonu = new JButton("Giriş");
+        girişbutonu.setFont(new Font("Arial", Font.PLAIN, 20));
+        girişbutonu.addActionListener(this);
+
+
 
 
         frame= new JFrame("giriş");
@@ -42,7 +50,22 @@ public class giriş {
         frame.setLayout(new GridLayout(3,1));
         frame.add(pabelust);
         frame.add(panelalt);
+        frame.add(girişbutonu);
         frame.setVisible(true);
 
 
-    }}
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == girişbutonu){
+            String kullanıcıadı = this.kullanıcıadı.getText().trim();
+            String sifre = this.sıfre.getText().trim();
+
+           if (kullanıcıadı.isEmpty() || sifre.isEmpty()){
+               JOptionPane.showMessageDialog(null, "Lütfen boş alan bırakmayın!"  + JOptionPane.ERROR_MESSAGE);
+           }
+        }
+
+    }
+}
