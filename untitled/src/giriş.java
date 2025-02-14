@@ -65,6 +65,21 @@ public class giriş implements ActionListener {
            if (kullanıcıadı.isEmpty() || sifre.isEmpty()){
                JOptionPane.showMessageDialog(null, "Lütfen boş alan bırakmayın!"  + JOptionPane.ERROR_MESSAGE);
            }
+            if(sifre.length() < 5){
+                JOptionPane.showMessageDialog(null, "minimum 5 karakter !"  + JOptionPane.ERROR_MESSAGE);
+
+            }
+            else if(kullanıcıadı.equals("onur" )&& sifre.equals("12345")){
+                JOptionPane.showMessageDialog(null, "Başarılı giriş!"  + JOptionPane.INFORMATION_MESSAGE);
+
+
+
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Kullanıcı adı veya şifre yanlış!"  + JOptionPane.ERROR_MESSAGE);
+
+            }
+
         }
 
     }
