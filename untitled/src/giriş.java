@@ -13,13 +13,13 @@ public class giriş {
         JPanel panelüst    = new JPanel();
 
         panelüst.setLayout(new FlowLayout(FlowLayout.RIGHT)   );
-        JLabel labelğst = new JLabel("kullanıcı adı");
-        labelğst.setFont(new Font("Arial", Font.PLAIN, 20));
+        JLabel labelust = new JLabel("kullanıcı adı");
+        labelust.setFont(new Font("Arial", Font.PLAIN, 20));
 
 
         kullanıcıadı = new JTextField();
         kullanıcıadı.setPreferredSize(new Dimension(200,40));
-        panelüst.add(labelğst);
+        panelüst.add(labelust);
         panelüst.add(kullanıcıadı);
 
         JPanel panelalt    = new JPanel();
